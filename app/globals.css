@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #070b14;
+  --foreground: #e2e8f0;
 }
 
 @theme inline {
@@ -14,13 +14,251 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #070b14;
+    --foreground: #e2e8f0;
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.interactive-panel {
+  position: relative;
+  overflow: hidden;
+  transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  will-change: transform;
+  transition: border-color 260ms ease, box-shadow 260ms ease, transform 260ms ease;
+}
+
+.interactive-panel::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+    460px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    rgba(34, 211, 238, 0.18),
+    rgba(14, 116, 144, 0.08) 28%,
+    transparent 62%
+  );
+  opacity: 0;
+  transition: opacity 280ms ease;
+  pointer-events: none;
+}
+
+.interactive-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(186, 230, 253, 0.08);
+  pointer-events: none;
+}
+
+.interactive-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.interactive-panel--active {
+  transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 8px 42px rgba(14, 165, 233, 0.18);
+}
+
+.interactive-panel--active::before {
+  opacity: 1;
+}
+
+@layer base {
+  .universe-bg {
+    --parallax-x: 0px;
+    --parallax-y: 0px;
+    --parallax-scroll: 0px;
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    pointer-events: none;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(56, 189, 248, 0.18), transparent 36%),
+      radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.18), transparent 34%),
+      #070b14;
+  }
+
+  .universe-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    mix-blend-mode: screen;
+  }
+
+  .universe-nebula,
+  .universe-aurora,
+  .universe-grid,
+  .universe-grain,
+  .universe-vignette {
+    position: absolute;
+    inset: -12%;
+  }
+
+  .universe-nebula {
+    background:
+      radial-gradient(circle at 25% 30%, rgba(14, 165, 233, 0.28), transparent 34%),
+      radial-gradient(circle at 70% 55%, rgba(129, 140, 248, 0.24), transparent 32%),
+      radial-gradient(circle at 50% 90%, rgba(6, 182, 212, 0.18), transparent 35%);
+    transform: translate3d(
+        calc(var(--parallax-x) * 0.35),
+        calc(var(--parallax-y) * 0.35 + var(--parallax-scroll) * 0.25),
+        0
+      )
+      scale(1.05);
+    filter: blur(8px);
+    animation: nebulaFloat 24s ease-in-out infinite alternate;
+  }
+
+  .universe-grid {
+    background-image:
+      linear-gradient(to right, rgba(56, 189, 248, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(56, 189, 248, 0.1) 1px, transparent 1px),
+      linear-gradient(to right, rgba(34, 211, 238, 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(34, 211, 238, 0.2) 1px, transparent 1px);
+    background-size: 46px 46px, 46px 46px, 184px 184px, 184px 184px;
+    mask-image: radial-gradient(ellipse 80% 60% at center bottom, black 40%, transparent 100%);
+    transform: perspective(900px) rotateX(58deg)
+      translate3d(
+        calc(var(--parallax-x) * 0.8),
+        calc(var(--parallax-y) * 0.8 + var(--parallax-scroll)),
+        0
+      )
+      scale(1.3);
+    transform-origin: center bottom;
+    opacity: 0.62;
+    animation: gridPulse 7s ease-in-out infinite;
+  }
+
+  .universe-aurora {
+    inset: -20%;
+    background:
+      radial-gradient(60% 50% at 18% 24%, rgba(14, 165, 233, 0.26), transparent 65%),
+      radial-gradient(48% 44% at 80% 20%, rgba(45, 212, 191, 0.18), transparent 68%),
+      radial-gradient(64% 50% at 55% 82%, rgba(129, 140, 248, 0.2), transparent 70%);
+    mix-blend-mode: screen;
+    opacity: 0.62;
+    filter: blur(24px) saturate(112%);
+    transform: translate3d(
+        calc(var(--parallax-x) * 0.5),
+        calc(var(--parallax-y) * 0.5 + var(--parallax-scroll) * 0.18),
+        0
+      )
+      scale(1.08);
+    animation: auroraSweep 17s ease-in-out infinite alternate;
+  }
+
+  .universe-grain {
+    inset: 0;
+    opacity: 0.075;
+    background-image: radial-gradient(rgba(226, 232, 240, 0.5) 0.6px, transparent 0.6px);
+    background-size: 3px 3px;
+    mix-blend-mode: soft-light;
+    animation: grainShift 9s steps(8) infinite;
+  }
+
+  .universe-vignette {
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 35%, rgba(3, 8, 18, 0.88) 100%);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease-out both;
+}
+
+@keyframes nebulaFloat {
+  0% {
+    opacity: 0.75;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(9px);
+  }
+}
+
+@keyframes starsDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-2.5%, -1.8%, 0);
+  }
+}
+
+@keyframes gridPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.82;
+  }
+}
+
+@keyframes auroraSweep {
+  0% {
+    opacity: 0.52;
+    transform: translate3d(-1.2%, -0.8%, 0) scale(1.06);
+  }
+  100% {
+    opacity: 0.72;
+    transform: translate3d(1.6%, 1.1%, 0) scale(1.1);
+  }
+}
+
+@keyframes grainShift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(-1%, 1%, 0);
+  }
+  50% {
+    transform: translate3d(1%, -1%, 0);
+  }
+  75% {
+    transform: translate3d(0.8%, 0.6%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .interactive-panel,
+  .interactive-panel--active {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
