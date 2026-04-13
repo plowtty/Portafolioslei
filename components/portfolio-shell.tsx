@@ -38,7 +38,7 @@ const labels = {
     about: {
       title: "Sobre mí",
       paragraphs: [
-        "Ingeniero Full-Stack con experiencia construyendo aplicaciones end-to-end y resolviendo problemas operativos reales mediante software. Especializado en React, Node.js y TypeScript, con bases sólidas en Java y Python. He participado en el diseño e implementación de sistemas internos para operaciones logísticas, incluyendo una solución digital de pesaje para mejorar trazabilidad, control y eficiencia en procesos de materiales.",
+        "Ingeniero Full-Stack con experiencia construyendo aplicaciones end-to-end y resolviendo problemas operativos reales mediante software. Especializado en React, Node.js y TypeScript, con bases sólidas en Java y Python. Diseñé e implementé un sistema digital interno de pesaje para operaciones logísticas que fortaleció la trazabilidad y el control de materiales, además de reducir tiempos operativos y costos para la empresa.",
         "Me interesan la inteligencia artificial, el desarrollo asistido por IA, la arquitectura de software y cloud computing con AWS. Trabajo con mentalidad analítica, proactiva y orientada a resultados.",
       ],
       chips: [
@@ -126,7 +126,7 @@ const labels = {
       role: "Administrative Assistant & Internal Solutions Developer",
       paragraphs: [
         "Coordinación de operaciones logísticas relacionadas con maquinaria pesada, negociación de precios, verificación de servicios y gestión con proveedores y empresas asociadas.",
-        "Diseño e implementación de un sistema digital interno de pesaje para registrar peso, tipo de material, equipo utilizado, origen, destino, fecha y hora; mejorando trazabilidad y control operativo de materiales.",
+        "Diseño e implementación de un sistema digital interno de pesaje para registrar peso, tipo de material, equipo utilizado, origen, destino, fecha y hora; fortaleciendo la trazabilidad y el control operativo de materiales, además de contribuir a la reducción de costos y tiempos en la operación.",
       ],
       certifications: "Certificaciones y cursos",
       certificationItems: [
@@ -174,7 +174,7 @@ const labels = {
     about: {
       title: "About me",
       paragraphs: [
-        "Full-Stack Engineer with experience building end-to-end applications and solving real operational problems through software. Specialized in React, Node.js, and TypeScript, with solid foundations in Java and Python. I have contributed to the design and implementation of internal systems for logistics operations, including a digital weighing solution to improve traceability, control, and process efficiency.",
+        "Full-Stack Engineer with experience building end-to-end applications and solving real operational problems through software. Specialized in React, Node.js, and TypeScript, with solid foundations in Java and Python. I designed and implemented an internal digital weighing system for logistics operations that improved material traceability and control while helping reduce operational time and costs for the company.",
         "I am interested in artificial intelligence, AI-assisted development, software architecture, and cloud computing with AWS. I work with an analytical, proactive, and results-driven mindset.",
       ],
       chips: [
@@ -262,7 +262,7 @@ const labels = {
       role: "Administrative Assistant & Internal Solutions Developer",
       paragraphs: [
         "Coordinated logistics operations related to heavy machinery, price negotiation, service verification, and management with suppliers and partner companies.",
-        "Designed and implemented an internal digital weighing system to register weight, material type, equipment used, origin, destination, date, and time, improving material traceability and operational control.",
+        "Designed and implemented an internal digital weighing system to register weight, material type, equipment used, origin, destination, date, and time, strengthening material traceability and operational control while helping reduce company costs and process time.",
       ],
       certifications: "Certifications and courses",
       certificationItems: [
