@@ -23,9 +23,9 @@ const labels = {
     ],
     hero: {
       title: "Sleider",
-      subtitle: "Full-Stack Software Engineer",
+      subtitle: "Full-Stack Software Engineer · Scalable Digital Products",
       description:
-        "Ingeniero de software especializado en la construcción de aplicaciones web modernas, APIs escalables y sistemas digitales completos utilizando React, Node.js y TypeScript.",
+        "Desarrollo aplicaciones web production-ready, APIs escalables y sistemas digitales de alto impacto con React, Node.js y TypeScript, aplicando arquitectura modular y optimización de rendimiento para entornos reales de negocio.",
       viewProjects: "Ver proyectos",
       contact: "Contacto",
       location: "Ubicación",
@@ -38,7 +38,7 @@ const labels = {
     about: {
       title: "Sobre mí",
       paragraphs: [
-        "Ingeniero Full-Stack con experiencia construyendo aplicaciones end-to-end y resolviendo problemas operativos reales mediante software. Especializado en React, Node.js y TypeScript, con bases sólidas en Java y Python. Diseñé e implementé un sistema digital interno de pesaje para operaciones logísticas que fortaleció la trazabilidad y el control de materiales, además de reducir tiempos operativos y costos para la empresa.",
+        "Ingeniero Full-Stack con experiencia construyendo aplicaciones end-to-end, escalables y orientadas a producción. Especializado en React, Node.js y TypeScript, con bases sólidas en Java y Python. He diseñado soluciones para operaciones logísticas reales, incluyendo un sistema interno de pesaje que mejoró la trazabilidad, redujo errores manuales en ~40% y disminuyó tiempos operativos en ~30%.",
         "Me interesan la inteligencia artificial, el desarrollo asistido por IA, la arquitectura de software y cloud computing con AWS. Trabajo con mentalidad analítica, proactiva y orientada a resultados.",
       ],
       chips: [
@@ -87,7 +87,7 @@ const labels = {
         {
           name: "Sleider Universe – Full Stack E-Commerce Platform",
           description:
-            "Plataforma de tienda online moderna con arquitectura full-stack escalable. Autenticación segura con JWT, carrito de compras funcional, sistema de órdenes, gestión de productos, perfiles de usuario y tema oscuro/claro. Deploy en Vercel (frontend) + Leapcell (backend PostgreSQL).",
+            "Plataforma e-commerce full-stack, escalable y production-ready construida con arquitectura modular. Integra autenticación segura con JWT, gestión de productos por roles, carrito y flujo completo de órdenes, con frontend optimizado y backend API robusto desplegado en entorno cloud.",
           highlights: [
             "Autenticación segura con JWT y bcryptjs",
             "Sistema de carrito y órdenes funcional",
@@ -126,7 +126,7 @@ const labels = {
       role: "Administrative Assistant & Internal Solutions Developer",
       paragraphs: [
         "Coordinación de operaciones logísticas relacionadas con maquinaria pesada, negociación de precios, verificación de servicios y gestión con proveedores y empresas asociadas.",
-        "Diseño e implementación de un sistema digital interno de pesaje para registrar peso, tipo de material, equipo utilizado, origen, destino, fecha y hora; fortaleciendo la trazabilidad y el control operativo de materiales, además de contribuir a la reducción de costos y tiempos en la operación.",
+        "Diseñé e implementé un sistema digital interno de pesaje para registrar peso, tipo de material, equipo utilizado, origen, destino, fecha y hora en tiempo real. La solución fortaleció la trazabilidad y el control operativo, redujo errores de registro en ~40% y contribuyó a reducir costos y tiempos del proceso en ~30%.",
       ],
       certifications: "Certificaciones y cursos",
       certificationItems: [
@@ -137,7 +137,7 @@ const labels = {
     contact: {
       title: "Contacto",
       description:
-        "Disponible para oportunidades Full-Stack, proyectos desafiantes y entrevistas técnicas.",
+        "Disponible para oportunidades Full-Stack en equipos internacionales, enfocado en construir sistemas escalables, production-ready y con impacto medible en negocio desde el primer día.",
     },
     footer: "Full-Stack Software Engineer",
     modal: {
@@ -159,9 +159,9 @@ const labels = {
     ],
     hero: {
       title: "Sleider",
-      subtitle: "Full-Stack Software Engineer",
+      subtitle: "Full-Stack Software Engineer · Scalable Digital Products",
       description:
-        "Software engineer specialized in building modern web applications, scalable APIs, and complete digital systems using React, Node.js, and TypeScript.",
+        "I build production-ready web applications, scalable APIs, and high-impact digital systems with React, Node.js, and TypeScript, using modular architecture and performance optimization for real-world business environments.",
       viewProjects: "View projects",
       contact: "Contact",
       location: "Location",
@@ -174,7 +174,7 @@ const labels = {
     about: {
       title: "About me",
       paragraphs: [
-        "Full-Stack Engineer with experience building end-to-end applications and solving real operational problems through software. Specialized in React, Node.js, and TypeScript, with solid foundations in Java and Python. I designed and implemented an internal digital weighing system for logistics operations that improved material traceability and control while helping reduce operational time and costs for the company.",
+        "Full-Stack Engineer experienced in building scalable, end-to-end, production-grade applications. Specialized in React, Node.js, and TypeScript, with solid foundations in Java and Python. I have designed software solutions for real logistics operations, including an internal digital weighing system that improved traceability, reduced manual errors by ~40%, and shortened operational processing time by ~30%.",
         "I am interested in artificial intelligence, AI-assisted development, software architecture, and cloud computing with AWS. I work with an analytical, proactive, and results-driven mindset.",
       ],
       chips: [
@@ -223,7 +223,7 @@ const labels = {
         {
           name: "Sleider Universe – Full Stack E-Commerce Platform",
           description:
-            "Modern online store platform with a scalable full-stack architecture. Secure JWT authentication, functional shopping cart, order system, product management, user profiles, and dark/light mode. Deployed on Vercel (frontend) + Leapcell (PostgreSQL backend).",
+            "Production-ready full-stack e-commerce platform built with modular architecture. It includes secure JWT authentication, role-based product management, shopping cart and full order lifecycle, with an optimized frontend and robust API backend deployed in cloud infrastructure.",
           highlights: [
             "Secure authentication with JWT and bcryptjs",
             "Functional cart and order workflow",
@@ -262,7 +262,7 @@ const labels = {
       role: "Administrative Assistant & Internal Solutions Developer",
       paragraphs: [
         "Coordinated logistics operations related to heavy machinery, price negotiation, service verification, and management with suppliers and partner companies.",
-        "Designed and implemented an internal digital weighing system to register weight, material type, equipment used, origin, destination, date, and time, strengthening material traceability and operational control while helping reduce company costs and process time.",
+        "Designed and implemented an internal digital weighing system to register weight, material type, equipment used, origin, destination, date, and time in real time. The solution strengthened traceability and operational control, reduced manual registration errors by ~40%, and helped cut process time and operational costs by ~30%.",
       ],
       certifications: "Certifications and courses",
       certificationItems: [
@@ -273,7 +273,7 @@ const labels = {
     contact: {
       title: "Contact",
       description:
-        "Available for Full-Stack opportunities, challenging projects, and technical interviews.",
+        "Open to international Full-Stack opportunities focused on scalable, production-ready systems and measurable business impact from day one.",
     },
     footer: "Full-Stack Software Engineer",
     modal: {
