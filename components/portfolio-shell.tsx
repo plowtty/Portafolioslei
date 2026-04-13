@@ -32,17 +32,17 @@ const labels = {
       education: "Educación",
       languages: "Idiomas",
       locationValue: "Costa Rica",
-      educationValue: "Bachelor's Degree in Systems Engineering",
+      educationValue: "Bachillerato en Ingeniería en Sistemas",
       languagesValue: "Español nativo · Inglés C1",
     },
     about: {
       title: "Sobre mí",
       paragraphs: [
         "Ingeniero Full-Stack con experiencia construyendo aplicaciones end-to-end, escalables y orientadas a producción. Especializado en React, Node.js y TypeScript, con bases sólidas en Java y Python. He diseñado soluciones para operaciones logísticas reales, incluyendo un sistema interno de pesaje que mejoró la trazabilidad, redujo errores manuales en ~40% y disminuyó tiempos operativos en ~30%.",
-        "Me interesan la inteligencia artificial, el desarrollo asistido por IA, la arquitectura de software y cloud computing con AWS. Trabajo con mentalidad analítica, proactiva y orientada a resultados.",
+        "Me interesa la inteligencia artificial, el desarrollo asistido por IA, la arquitectura de software y cloud computing con AWS. Trabajo con mentalidad analítica, proactiva y orientada a resultados.",
       ],
       chips: [
-        "🎓 Bachelor's Degree in Systems Engineering",
+        "🎓 Bachillerato en Ingeniería en Sistemas",
         "🌎 Español nativo · Inglés C1 (profesional)",
       ],
     },
@@ -75,8 +75,6 @@ const labels = {
       title: "Proyectos principales",
       description:
         "Proyectos enfocados en experiencia de usuario, arquitectura modular y soluciones funcionales con enfoque real de negocio.",
-      note:
-        "Los botones deshabilitados quedan listos para activar apenas agregues las URLs reales de demo, repositorio y arquitectura en `data/portfolio.ts`.",
       buttons: {
         demo: "Live Demo",
         github: "GitHub",
@@ -211,8 +209,6 @@ const labels = {
       title: "Featured projects",
       description:
         "Projects focused on user experience, modular architecture, and functional solutions with real business value.",
-      note:
-        "Disabled buttons stay ready to activate as soon as you add the real demo, repository, and architecture URLs in `data/portfolio.ts`.",
       buttons: {
         demo: "Live Demo",
         github: "GitHub",
@@ -475,7 +471,6 @@ export function PortfolioShell() {
               />
             ))}
           </div>
-          <p className="mt-5 text-sm text-slate-400">{content.projects.note}</p>
         </InteractivePanel>
 
         <InteractivePanel id="experience" className="animate-fade-up rounded-3xl border border-white/20 bg-slate-900/30 p-8 backdrop-blur-md md:p-10">
