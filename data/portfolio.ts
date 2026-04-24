@@ -65,14 +65,14 @@ export const projects = [
       "Supertest",
     ],
     description:
-      "Plataforma full-stack de gestión de incidencias para soporte técnico interno, con control por roles, métricas operativas en tiempo real y enfoque de seguridad aplicada para entornos productivos.",
+      "Plataforma interna de soporte técnico con arquitectura full-stack en capas (Route → Middleware → Controller → Service → Prisma), diseñada para gestionar el ciclo completo de incidencias con control por roles, seguridad aplicada y métricas operativas en tiempo real.",
     highlights: [
-      "Gestión completa del ciclo de tickets con trazabilidad",
-      "Control por roles (Admin, Agent, Client) con permisos granulares",
-      "Autenticación JWT con access/refresh token y cookie httpOnly",
-      "Protección anti brute-force y rate limiting configurable",
-      "Dashboard operativo con métricas por estado y rendimiento",
-      "Arquitectura modular por capas + pruebas con Jest y Supertest",
+      "Gestión de tickets end-to-end: creación, asignación, comentarios, cambio de estado y cierre con trazabilidad",
+      "Control por roles (Admin, Agent, Client) con permisos granulares y validaciones a nivel de servicio",
+      "API REST con JWT de doble token (access + refresh en cookie httpOnly)",
+      "Bloqueo temporal por email + IP, rate limiting configurable por entorno y hardening con Helmet/CORS",
+      "Dashboard operativo con métricas en tiempo real por estado, rendimiento de agentes y estadísticas globales",
+      "Frontend con Zustand + interceptores de Axios y soporte light/dark; pruebas de integración con Jest + Supertest",
     ],
     links: {
       demo: "https://tickets-tau-wheat.vercel.app",

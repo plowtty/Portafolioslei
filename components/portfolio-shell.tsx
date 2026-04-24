@@ -85,14 +85,14 @@ const labels = {
         {
           name: "Tickets Help Desk Platform",
           description:
-            "Plataforma full-stack de gestión de incidencias que cubre el ciclo completo de un ticket, desde apertura por cliente hasta cierre por agente o administrador. Implementa arquitectura modular por capas, seguridad aplicada y métricas operativas en tiempo real para soporte técnico interno.",
+            "Plataforma interna de soporte técnico con arquitectura full-stack en capas (Route → Middleware → Controller → Service → Prisma), diseñada para cubrir el ciclo completo de incidencias: apertura por cliente, asignación por agente y cierre controlado por roles. Integra seguridad aplicada, auditoría de autenticación y métricas operativas en tiempo real.",
           highlights: [
-            "Flujo completo de tickets: creación, asignación, comentarios y cierre",
-            "Control por roles (Admin, Agent, Client) con validaciones por nivel",
-            "JWT de doble token (access + refresh en cookie httpOnly)",
-            "Rate limiting, bloqueo temporal por intentos y hardening con Helmet/CORS",
-            "Dashboard operativo con métricas por estado y rendimiento",
-            "Pruebas de integración con Jest + Supertest",
+            "Gestión de tickets end-to-end: creación, asignación, comentarios, cambio de estado y cierre con trazabilidad",
+            "Control por roles (Admin, Agent, Client) con permisos granulares y validaciones a nivel de servicio",
+            "API REST con JWT de doble token (access + refresh en cookie httpOnly)",
+            "Bloqueo temporal por email + IP, rate limiting configurable por entorno y hardening con Helmet/CORS",
+            "Dashboard operativo con métricas en tiempo real por estado, rendimiento de agentes y estadísticas globales",
+            "Frontend con Zustand + interceptores de Axios y soporte light/dark; pruebas de integración con Jest + Supertest",
           ],
         },
         {
@@ -232,14 +232,14 @@ const labels = {
         {
           name: "Tickets Help Desk Platform",
           description:
-            "Full-stack incident management platform that covers the complete ticket lifecycle, from client creation to agent/admin closure. It follows a layered modular architecture with applied security practices and real-time operational metrics for internal technical support.",
+            "Internal technical support platform with a layered full-stack architecture (Route → Middleware → Controller → Service → Prisma), built to cover the complete incident lifecycle: client ticket creation, agent assignment, and role-controlled closure. It includes applied security, authentication auditing, and real-time operational metrics.",
           highlights: [
-            "End-to-end ticket workflow: creation, assignment, comments, and closure",
-            "Role-based control (Admin, Agent, Client) with granular validations",
-            "Dual-token JWT authentication (access + refresh in httpOnly cookie)",
-            "Rate limiting, temporary lockout, and hardening with Helmet/CORS",
-            "Operational dashboard with status and performance metrics",
-            "Integration testing with Jest + Supertest",
+            "End-to-end ticket workflow: creation, assignment, comments, status transitions, and traceable closure",
+            "Role-based permissions (Admin, Agent, Client) with service-level validations",
+            "REST API secured with dual-token JWT auth (access + refresh in httpOnly cookie)",
+            "Temporary lockout by email + IP, environment-based rate limiting, and Helmet/CORS hardening",
+            "Operational dashboard with real-time status metrics, agent performance, and global stats",
+            "Frontend with Zustand + Axios interceptors and light/dark support; integration tests with Jest + Supertest",
           ],
         },
         {
