@@ -83,6 +83,19 @@ const labels = {
       },
       entries: [
         {
+          name: "Tickets Help Desk Platform",
+          description:
+            "Plataforma full-stack de gestión de incidencias que cubre el ciclo completo de un ticket, desde apertura por cliente hasta cierre por agente o administrador. Implementa arquitectura modular por capas, seguridad aplicada y métricas operativas en tiempo real para soporte técnico interno.",
+          highlights: [
+            "Flujo completo de tickets: creación, asignación, comentarios y cierre",
+            "Control por roles (Admin, Agent, Client) con validaciones por nivel",
+            "JWT de doble token (access + refresh en cookie httpOnly)",
+            "Rate limiting, bloqueo temporal por intentos y hardening con Helmet/CORS",
+            "Dashboard operativo con métricas por estado y rendimiento",
+            "Pruebas de integración con Jest + Supertest",
+          ],
+        },
+        {
           name: "Sleider Universe – Full Stack E-Commerce Platform",
           description:
             "Plataforma e-commerce full-stack, escalable y production-ready construida con arquitectura modular. Integra autenticación segura con JWT, gestión de productos por roles, carrito y flujo completo de órdenes, con frontend optimizado y backend API robusto desplegado en entorno cloud.",
@@ -216,6 +229,19 @@ const labels = {
         placeholder: "Add the real URL to enable this button",
       },
       entries: [
+        {
+          name: "Tickets Help Desk Platform",
+          description:
+            "Full-stack incident management platform that covers the complete ticket lifecycle, from client creation to agent/admin closure. It follows a layered modular architecture with applied security practices and real-time operational metrics for internal technical support.",
+          highlights: [
+            "End-to-end ticket workflow: creation, assignment, comments, and closure",
+            "Role-based control (Admin, Agent, Client) with granular validations",
+            "Dual-token JWT authentication (access + refresh in httpOnly cookie)",
+            "Rate limiting, temporary lockout, and hardening with Helmet/CORS",
+            "Operational dashboard with status and performance metrics",
+            "Integration testing with Jest + Supertest",
+          ],
+        },
         {
           name: "Sleider Universe – Full Stack E-Commerce Platform",
           description:
