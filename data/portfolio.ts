@@ -47,6 +47,40 @@ export const skills = {
 
 export const projects = [
   {
+    name: "Tickets Help Desk Platform",
+    technologies: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "Prisma ORM",
+      "PostgreSQL",
+      "JWT",
+      "Zod",
+      "React",
+      "Vite",
+      "Zustand",
+      "Axios",
+      "Tailwind CSS",
+      "Jest",
+      "Supertest",
+    ],
+    description:
+      "Plataforma full-stack de gestión de incidencias para soporte técnico interno, con control por roles, métricas operativas en tiempo real y enfoque de seguridad aplicada para entornos productivos.",
+    highlights: [
+      "Gestión completa del ciclo de tickets con trazabilidad",
+      "Control por roles (Admin, Agent, Client) con permisos granulares",
+      "Autenticación JWT con access/refresh token y cookie httpOnly",
+      "Protección anti brute-force y rate limiting configurable",
+      "Dashboard operativo con métricas por estado y rendimiento",
+      "Arquitectura modular por capas + pruebas con Jest y Supertest",
+    ],
+    links: {
+      demo: "https://tickets-tau-wheat.vercel.app",
+      github: "https://github.com/plowtty/Tickets",
+      architecture: "https://github.com/plowtty/Tickets#readme",
+    },
+  },
+  {
     name: "Sleider Universe – Full Stack E-Commerce Platform",
     technologies: [
       "React 18",
