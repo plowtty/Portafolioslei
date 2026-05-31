@@ -149,6 +149,12 @@ const labels = {
       title: "Contacto",
       description:
         "Disponible para oportunidades Full-Stack en equipos internacionales, enfocado en construir sistemas escalables, production-ready y con impacto medible en negocio desde el primer día.",
+      cvButton: "Descargar CV",
+      cvModalTitle: "Selecciona el idioma del CV",
+      cvModalDescription: "Elige qué versión deseas descargar.",
+      cvSpanish: "CV en Español",
+      cvEnglish: "CV in English",
+      close: "Cancelar",
     },
     footer: "Full-Stack Software Engineer",
     modal: {
@@ -296,6 +302,12 @@ const labels = {
       title: "Contact",
       description:
         "Open to international Full-Stack opportunities focused on scalable, production-ready systems and measurable business impact from day one.",
+      cvButton: "Download CV",
+      cvModalTitle: "Choose CV language",
+      cvModalDescription: "Select which version you want to download.",
+      cvSpanish: "CV in Spanish",
+      cvEnglish: "CV in English",
+      close: "Cancel",
     },
     footer: "Full-Stack Software Engineer",
     modal: {
@@ -315,6 +327,12 @@ function translateSkillItem(language: Language, item: string) {
 export function PortfolioShell() {
   const [language, setLanguage] = useState<Language>("es");
   const [hasSelectedLanguage, setHasSelectedLanguage] = useState(false);
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
+
+  const cvFiles = {
+    es: "/CV_Sleider_spa.pdf",
+    en: "/CV_Sleider_en.pdf",
+  } as const;
 
   useEffect(() => {
     const saved = window.localStorage.getItem(storageKey);
@@ -372,6 +390,40 @@ export function PortfolioShell() {
                 {labels.en.modal.english}
               </button>
             </div>
+          </div>
+        </div>
+      ) : null}
+
+      {isCvModalOpen ? (
+        <div className="fixed inset-0 z-[110] flex items-center justify-center bg-slate-950/70 p-6 backdrop-blur-md">
+          <div className="w-full max-w-lg rounded-3xl border border-cyan-300/25 bg-slate-950/90 p-7 shadow-[0_0_60px_rgba(34,211,238,0.18)]">
+            <h3 className="text-2xl font-semibold text-white">{content.contact.cvModalTitle}</h3>
+            <p className="mt-3 text-slate-300">{content.contact.cvModalDescription}</p>
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              <a
+                href={cvFiles.es}
+                download
+                onClick={() => setIsCvModalOpen(false)}
+                className="rounded-2xl bg-cyan-400 px-5 py-4 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+              >
+                {content.contact.cvSpanish}
+              </a>
+              <a
+                href={cvFiles.en}
+                download
+                onClick={() => setIsCvModalOpen(false)}
+                className="rounded-2xl border border-white/20 px-5 py-4 text-sm font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-300"
+              >
+                {content.contact.cvEnglish}
+              </a>
+            </div>
+            <button
+              type="button"
+              onClick={() => setIsCvModalOpen(false)}
+              className="mt-4 text-sm text-slate-400 transition hover:text-cyan-300"
+            >
+              {content.contact.close}
+            </button>
           </div>
         </div>
       ) : null}
@@ -523,7 +575,7 @@ export function PortfolioShell() {
 
         <InteractivePanel id="contact" className="animate-fade-up rounded-3xl border border-white/20 bg-slate-900/30 p-8 backdrop-blur-md md:p-10">
           <SectionTitle title={content.contact.title} description={content.contact.description} />
-          <div className="mt-6 grid gap-3 text-sm md:grid-cols-3">
+          <div className="mt-6 grid gap-3 text-sm md:grid-cols-4">
             <a href={`mailto:${contacts.email}`} className="rounded-xl border border-white/15 bg-slate-950/35 px-4 py-3 text-slate-200 backdrop-blur-sm transition hover:border-cyan-300 hover:text-cyan-300">
               {contacts.email}
             </a>
@@ -533,6 +585,13 @@ export function PortfolioShell() {
             <a href={contacts.linkedin} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 bg-slate-950/35 px-4 py-3 text-slate-200 backdrop-blur-sm transition hover:border-cyan-300 hover:text-cyan-300">
               LinkedIn
             </a>
+            <button
+              type="button"
+              onClick={() => setIsCvModalOpen(true)}
+              className="rounded-xl border border-white/15 bg-slate-950/35 px-4 py-3 text-left text-slate-200 backdrop-blur-sm transition hover:border-cyan-300 hover:text-cyan-300"
+            >
+              {content.contact.cvButton}
+            </button>
           </div>
         </InteractivePanel>
       </main>
